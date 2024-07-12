@@ -1,6 +1,9 @@
 *, :root {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  /* fonte */
   font-family: 'Poppins', sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -9,22 +12,88 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  background-color: #412234;
+}
+
 main {
   max-width: 640px;
   padding: 20px;
   margin: 0 auto 50px;
 }
 
+header {
+  margin-top: 44px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #EAD7D7;
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+.quizItem {
+  margin-top: 24px;
+  border: 1px solid #EAD7D7;
+  border-radius: 6px;
+}
+
+.quizItem h3 {
+  padding:  16px 20px;
+}
+
+.quizItem dl {
+  padding: 20px 24px;
+  display: grid;
+  gap: 8px;
+}
+
+.quizItem dl dt {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input {
+  all: unset;
+  border: 2px ridge #B49FCC;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input:checked {
+  border: 2px groove #CFB4CF;
+}
+
+input:checked::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #B49FCC;
+}
+
 #acertos {
   text-align: center;
-  background-color: #ff9d2d;
+  background-color: #B49FCC;
   padding: 12px;
-
+  
   position: fixed;
   bottom: 0;
   left: 0;
-
+  
   width: 100%;
+}
+#acertos strong,
+#acertos span {
+  color: #412234;
 }
 
 h1 {
